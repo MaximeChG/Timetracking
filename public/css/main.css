@@ -1,0 +1,37 @@
+/* ---------
+
+Games section
+
+-------------*/
+
+.carousel-control-prev {
+    padding-right: 150px;
+}
+
+.carousel-control-next {
+    padding-left: 150px;
+}
+
+form#time-entry-form {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+#form-row {
+    margin-left: 25%;
+}
+.btn-time {
+    margin-top: 25px;
+}
+
+.time-row {
+    margin-left: 20%;
+    width: 60%;
+    border: 1px solid white;
+    background-color: rgb(92, 92, 92);
+    color: white;
+}
+
+.time-col {
+    border-right: .25px solid white;
+}

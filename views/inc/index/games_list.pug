@@ -1,0 +1,101 @@
+//-  Games Section
+//-    TO DO:
+        
+       
+//-         Create the database
+//-         Create the add a game page (Most likely a modal form above the page)
+//-         add functionality to add games.
+//-         Create a template for a single game view
+//-         Create link when clicking on a game to view all games.
+//-         Create the all games page
+//-         Possibly add the option to allow timetracking
+//-         Allow the site to show game progress
+//-         Game ratings added
+//-         Game reviews added and viewable/editable.
+//-         Connect to API for achievements/trophies?
+
+section.section-games
+    div.container
+        //- Header of Section
+        div.row.text-center
+            h1.display-3 Games
+        //-
+        //-  Creation of the Carousel
+        //-
+        div.row.d-flex.text-center
+            div.carousel.slide(data-bs-interval="false")#carouselGames
+                div.carousel-inner
+                    //- 
+                    //-     First set of games
+                    //- 
+                    div.carousel-item.active
+                        div.row 
+                            div.col
+                                figure.figure
+                                    img.figure-img.img-fluid(src="/img/games/13sentinelsaegisrim.jpg",  alt="13 Sentinels: Aegis Rim")
+                                    figcaption.figure-caption.text-center 13 Sentinels: Aegis Rim
+                            div.col
+                                figure.figure
+                                    img.figure-img.img-fluid(src="/img/games/genshinimpact.jpg",  alt="Genshin Impact")
+                                    figcaption.figure-caption.text-center Genshin Impact
+                            div.col
+                                figure.figure
+                                    img.figure-img.img-fluid(src="/img/games/finalfantasy4.jpg",  alt="Final Fantasy 4")
+                                    figcaption.figure-caption.text-center Final Fantasy 4
+                            div.col
+                                figure.figure
+                                    img.figure-img.img-fluid(src="/img/games/persona3fes.jpg",  alt="Persona 3 Fes")
+                                    figcaption.figure-caption.text-center Persona 3 Fes
+                    //- 
+                    //-     Second set of games
+                    //-
+                    div.carousel-item
+                        div.row
+                            div.col
+                                figure.figure
+                                    img.figure-img.img-fluid(src="/img/games/DarkCloud.jpg",  alt="Dark Cloud")
+                                    figcaption.figure-caption.text-center Dark Cloud
+                            div.col
+                                figure.figure
+                                    img.figure-img.img-fluid(src="/img/games/DigimonWorldNextOrder.jpg",  alt="Digimon World Next Order")
+                                    figcaption.figure-caption.text-center Digimon World Next Order
+                            div.col
+                                figure.figure
+                                    img.figure-img.img-fluid(src="/img/games/Disgaea2.jpg",  alt="Disgaea 2")
+                                    figcaption.figure-caption.text-center Disgaea 2
+                            div.col
+                                figure.figure
+                                    img.figure-img.img-fluid(src="/img/games/HeartGold.jpg",  alt="Pokemon HeartGold")
+                                    figcaption.figure-caption.text-center Pokemon HeartGold
+                    //- 
+                    //-     Third set of games
+                    //-
+                    div.carousel-item
+                        div.row
+                            div.col
+                                figure.figure
+                                    img.figure-img.img-fluid(src="/img/games/HyruleWarriors.jpg",  alt="Hyrule Warriors")
+                                    figcaption.figure-caption.text-center Hyrule Warriors: Definitive Edition
+                            div.col
+                                figure.figure
+                                    img.figure-img.img-fluid(src="/img/games/Legaia2.jpg",  alt="Legaia 2: Duel Saga")
+                                    figcaption.figure-caption.text-center Legaia 2: Duel Saga
+                            div.col
+                                figure.figure
+                                    img.figure-img.img-fluid(src="/img/games/RecordofAgarest.jpg",  alt="Records of Agarest Wars")
+                                    figcaption.figure-caption.text-center Records of Agarest Wars
+                            div.col
+                                figure.figure
+                                    img.figure-img.img-fluid(src="/img/games/persona3fes.jpg",  alt="Persona 3 Fes")
+                                    figcaption.figure-caption.text-center Persona 3 Fes
+                //- Carousel buttons on left and right
+                button.carousel-control-prev.left(type="button", data-bs-target="#carouselGames", data-bs-slide="prev")
+                    span.carousel-control-prev-icon(aria-hidden="true")
+                    span.visually-hidden Previous
+                button.carousel-control-next.right(type="button", data-bs-target="#carouselGames", data-bs-slide="next")
+                    span.carousel-control-next-icon(aria-hidden="true")
+                    span.visually-hidden Next
+        //- Button to head to all Games list
+        div.text-center
+            a.btn.btn-outline-light(href="games_list.php", role="button") View all games
+            button.btn.btn-outline-light(href="#", role="button")#index-add-game-btn Add Game

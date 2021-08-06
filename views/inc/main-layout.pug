@@ -1,0 +1,46 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title #{pageTitle}
+        
+        link(rel="stylesheet", type="text/css", href="/css/bootstrap.min.css")
+        link(rel="stylesheet", type="text/css", href="/css/grid.css")
+        link(rel="stylesheet", type="text/css", href="/css/reset.css")
+        link(rel="stylesheet", type="text/css", href="/css/style.css")
+        link(rel="stylesheet", type="text/css", href="/css/main.css")
+
+        block styles
+    body
+        header
+            div.container
+                div.row.d-flex 
+                    nav.navbar.navbar-expand-lg.navbar-dark
+                        div.container-fluid 
+                            a.navbar-brand(href="/") All-In-One 
+                            button.navbar-toggler(type="button", data-bs-toggle="collapse", data-bs-target="mynav", aria-expanded="false", aria-label="Toggle navigation")
+                                span.navbar-toggle-icon 
+
+                            div.collapse.navbar-collapse#mynav 
+                                ul.navbar-nav.ms-auto.mb-2.mb-lg-0 
+                                    li.nav-item 
+                                        a.nav-link(href="/games_list") Games List
+                                    li.nav-item 
+                                        a.nav-link(href="/timesheet") Timesheets
+                                    li.nav-item 
+                                        a.nav-link(href="/guides") Guides
+                                    li.nav-item 
+                                        a.nav-link(href="/portfolio") Portfolio
+
+
+
+        block content
+
+        block footer
+        footer
+            p.center Footer is here
+            script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js", integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0", crossorigin="anonymous")
+            script(src="https://code.jquery.com/jquery-3.6.0.js", integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=", crossorigin="anonymous")
+            script(src="/js/main.js")

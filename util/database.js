@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 
-const sequelize = new Sequelize('website', 'root', 'root', {
+const sequelize = new Sequelize('timetracking', 'root', 'root', {
     dialect: 'mysql',
     host: 'localhost',
     define: {

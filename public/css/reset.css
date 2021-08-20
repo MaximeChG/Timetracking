@@ -6,7 +6,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
-    color: #545454;
+    color: #8b8a8a;
     /*height: 3000px;*/
 }
 
@@ -74,9 +74,16 @@ ul {
 }
 
 .primary-bg {
-    background-color: black;
+    background-color: rgb(92, 92, 92);
 }
 
+.dark-grey-bg {
+    background-color: rgb(92, 92, 92);
+}
+
+.light-grey-bg {
+    background-color: rgb(136, 135, 135); 
+}
 .blue {
     color: #3498db;
 }

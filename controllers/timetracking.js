@@ -12,9 +12,8 @@ exports.getIndex = (req, res, next) => {
     }).then(project => {
         Time.findAll({
             attributes: ['time_worked', 'date_added'],
-            where: {
-                date_added: dateFormat(now, "yyyy-mm-dd")
-            },
+            limit: 5,
+            order: [['date_added', 'DESC']],
             include: [{
                 model: Task,
                 required: true,
@@ -27,7 +26,6 @@ exports.getIndex = (req, res, next) => {
             }]
         }) 
         .then(time => {
-            console.log(time[0].time_worked);
             res.render('main-page', {
                 pageTitle: 'Main-Page',
                 projects: project,
@@ -57,6 +55,21 @@ exports.postAddTime = (req, res, next) => {
     }).catch(err => {
         console.log(err);
     });
+};
+
+exports.postDeleteTime = (req,res,next) => {
+    const timeID = req.body.timeID;
+    Time.findAll({
+        where: time_id = timeID
+    })
+      .then(time => {
+        return time.destroy();
+      })
+      .then(result => {
+        console.log('DESTROYED time');
+        res.redirect('/');
+      })
+      .catch(err => console.log(err));
 };
 
 exports.postFillTask = (req, res, next) => {

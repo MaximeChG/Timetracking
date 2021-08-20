@@ -1,0 +1,44 @@
+div.row.text-center
+    div.row.time-headers
+        div.col.time-header
+            h3 Project Name
+        div.col.time-header
+            h3 Task Name
+        div.col.time-header
+            h3 Time Worked
+        div.col.time-header
+            h3 Date Added
+        div.col
+            p
+    -var x = 0;
+    each time in times
+        if x % 2 
+            div.row.time-row.dark-grey-bg
+                div.col.time-col
+                    p #{time.task.project.project_name}
+                div.col.time-col
+                    p #{time.task.task_name}
+                div.col.time-col
+                    p #{time.time_worked}
+                div.col.time-col
+                    p #{time.date_added}
+                div.col.delete-time
+                    form(action="/delete-time", method="POST")
+                        input(type="hidden", value=time.time_id, name="timeID")
+                        button.btn.btn-delete(type="submit") Delete
+        else
+            div.row.time-row.light-grey-bg
+                div.col.time-col
+                    p #{time.task.project.project_name}
+                div.col.time-col
+                    p #{time.task.task_name}
+                div.col.time-col
+                    p #{time.time_worked}
+                div.col.time-col
+                    p #{time.date_added}
+                div.col.delete-time
+                    <form action="/delete-time" method="POST">
+                        <input type="hidden" value=time.time_id name="timeID">
+                        <button class="btn btn-sm" type="submit">Delete</button>
+                    </form>
+        -x = x+1

@@ -15,30 +15,22 @@ section.section-time-tracking
             form.time-entry-form.align-items-center#time-entry-form(action="/add-time", method="POST")
                 div.row#form-row
                     div.col-3
-                        label.form-label(for="project-name") Project Name
+                        label.form-label(for="project") Project Name
                         select.form-select(name="project")#project-name-index
                             option(value="0", selected) Choose project
                             each project in projects
                                 option(value=project.project_id) #{project.project_name}
                             option(value="0", selected) Choose Work Type
                     div.col-3
-                        label.form-label(for="task-name") Task
+                        label.form-label(for="task") Task
                         select.form-select(name="task", disabled)#task-name-index
                             option(value="0", selected) Choose task
                     div.col-auto
-                        label(for="time-worked").form-label Time Worked
+                        label(for="time").form-label Time Worked
                         input.form-control(type="number", min="0.5", max="10", step="0.5", value="0.5", name="time")#time-worked
                 div.text-center
                     button.btn.btn-outline-light.btn-time(href="#", role="button", type="submit")#btn-add-time-index Add Time
                     button.btn.btn-outline-light.btn-time(href="#", role="button")#btn-admin-time-index Admin
                     //- buttons for reports and list of all times added
             
-            div.row.text-center
-                each time in times
-                    div.row.time-row
-                        div.col.time-col
-                            p #{time.task.project.project_name}
-                        div.col.time-col
-                            p #{time.task.task_name}
-                        div.col
-                            p #{time.time_worked}
+            
